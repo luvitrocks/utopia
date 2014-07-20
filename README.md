@@ -4,7 +4,7 @@ Utopia is a http server framework for [luvit.io](http://luvit.io) using "plugins
 
 ## Install
 
-Utopia uses [NPM](https://www.npmjs.org/) as dependency manager so for installing and using it you will need latest luvit.io version (``>= 0.8.2``) and ``npm`` (this can be grabbed together with [Node.js](http://nodejs.org/)) installed on your machine.
+Utopia uses [npm](https://www.npmjs.org/) as dependency manager so for installing and using it you will need latest luvit.io version (``>= 0.8.2``) and ``npm`` (this can be grabbed together with [Node.js](http://nodejs.org/)) installed on your machine.
 
 ## Usage
 
