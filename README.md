@@ -4,13 +4,16 @@ Utopia is a http server framework for [luvit.io](http://luvit.io) which is using
 
 ## Install
 
-Utopia uses [npm](https://www.npmjs.org/) as dependency manager so for installing and using it you will need latest luvit.io version (``>= 0.8.2``) and ``npm`` (this can be grabbed together with [Node.js](http://nodejs.org/)) installed on your machine.
+Utopia uses [npm](https://www.npmjs.org/) as dependency manager so for installing and using it you will need latest luvit.io version (``>= 0.8.2``) and ``npm`` (this can be grabbed together with [node.js](http://nodejs.org/)) installed on your machine.
+
+```bash
+npm install luvit-utopia
+```
 
 ## Usage
 
 ```lua
 local utopia = require('utopia')
-local http = require('http')
 
 local app = utopia:new()
 
