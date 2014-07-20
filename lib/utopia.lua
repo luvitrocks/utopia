@@ -6,9 +6,9 @@ local debug = require('debug')
 local env = process.env.LUVIT_ENV or 'development'
 local stack = {}
 
-local App = Object:extend()
+local Utopia = Object:extend()
 
-function App:initialize ()
+function Utopia:initialize ()
 	self.route = '/'
 	self.stack = {}
 	self.handler = function (req, res, follow)
@@ -16,7 +16,7 @@ function App:initialize ()
 	end
 end
 
-function App:use (route, fn)
+function Utopia:use (route, fn)
 	if type(route) ~= 'string' then
 		fn = route
 		route = '/'
@@ -31,7 +31,7 @@ function App:use (route, fn)
 	return app
 end
 
-function App:handle (req, res, out)
+function Utopia:handle (req, res, out)
 	local index = 0
 
 	function follow (err)
@@ -98,9 +98,9 @@ function App:handle (req, res, out)
 	follow()
 end
 
-function App:listen (port)
+function Utopia:listen (port)
 	local server = http.createServer(self.handler)
 	return server:listen(unpack({port}))
 end
 
-return App
+return Utopia
