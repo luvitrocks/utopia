@@ -1,6 +1,34 @@
-#luvit-utopia
+# luvit-utopia
 
-##License
+Utopia is a http server framework for [luvit.io](http://luvit.io) using "plugins" known as middlewares and highly inspired by [connect.js](https://github.com/senchalabs/connect).
+
+## Install
+
+Utopia uses [NPM](https://www.npmjs.org/) as dependency manager so for installing and using it you will need luvit.io version ``>= 0.8.2`` and ``npm`` installed (this can be grabbed together with [Node.js](http://nodejs.org/)) on your machine.
+
+## Usage
+
+```lua
+local utopia = require('utopia')
+local http = require('http')
+
+local app = utopia:new()
+
+-- log every request
+local logger = require('logger')
+app:use(logger('dev'))
+
+-- respond to all requests
+app:use(function (req, res)
+	res:finish('Hello from Utopia!')
+end)
+
+http.createServer(app):listen(8080)
+```
+
+## Middlewares
+
+## License
 
 ```
 WWWWWW||WWWWWW
