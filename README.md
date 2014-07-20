@@ -1,7 +1,24 @@
 #luvit-utopia
 
 ##License
-The MIT Licensed
+```
+                         ___---___
+                      .--         --.
+                    ./   ()      .-. \.
+                   /   o    .   (   )  \
+                  / .            '-'    \
+                 | ()    .  O         .  |
+                |                         |
+                |    o           ()       |
+                |       .--.          O   |
+                 | .   |    |            |
+                  \    `.__.'    o   .  /
+                   \                   /
+                    `\  o    ()      /'
+                      `--___   ___--'
+                            ---
+```
+MIT Licensed
 
 Copyright (c) 2014 Dmitri Voronianski [dmitri.voronianski@gmail.com](mailto:dmitri.voronianski@gmail.com)
 
