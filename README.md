@@ -1,6 +1,6 @@
 # luvit-utopia
 
-Utopia is a http server framework for [luvit.io](http://luvit.io) using "plugins" known as middlewares and highly inspired by [connect.js](https://github.com/senchalabs/connect).
+Utopia is a http server framework for [luvit.io](http://luvit.io) which is using "plugins" known as middlewares. Highly inspired by [connect.js](https://github.com/senchalabs/connect).
 
 ## Install
 
