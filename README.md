@@ -23,7 +23,7 @@ app:use(function (req, res)
 	res:finish('Hello from Utopia!')
 end)
 
-http.createServer(app):listen(8080)
+app:listen(8080)
 ```
 
 ## Middlewares

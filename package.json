@@ -1,6 +1,6 @@
 {
   "name": "luvit-utopia",
-  "version": "0.0.1-alpha",
+  "version": "0.0.1-alpha1",
   "description": "High performance middleware framework for Luvit.io",
   "main": "init.lua",
   "scripts": {
