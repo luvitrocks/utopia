@@ -4,7 +4,6 @@ local table = require('table')
 local debug = require('debug')
 
 local env = process.env.LUVIT_ENV or 'development'
-local stack = {}
 
 local Utopia = Object:extend()
 
@@ -26,7 +25,7 @@ function Utopia:use (route, fn)
 	local go = { route = route }
 	function go:handle () return fn end
 
-	table.insert(stack, go)
+	table.insert(self.stack, go)
 
 	return app
 end
@@ -35,12 +34,13 @@ function Utopia:handle (req, res, out)
 	local index = 0
 
 	function follow (err)
-		local layer, handle
+		local layer
 
 		index = index + 1
-		layer = stack[index]
+		layer = self.stack[index]
 
 		-- all done
+		-- NB: this could be moved into separate module (e.g. node's https://github.com/expressjs/finalhandler)
 		if not layer then
 			-- delegate to parent
 			if out then return out(err) end
@@ -81,7 +81,7 @@ function Utopia:handle (req, res, out)
 			return
 		end
 
-		handle = layer:handle()
+		local handle = layer:handle()
 
 		if err then
 			local arity = debug.getinfo(handle, 'u').nparams
@@ -98,9 +98,9 @@ function Utopia:handle (req, res, out)
 	follow()
 end
 
-function Utopia:listen (port)
+function Utopia:listen (...)
 	local server = http.createServer(self.handler)
-	return server:listen(unpack({port}))
+	return server:listen(unpack({...}))
 end
 
 return Utopia
