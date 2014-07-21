@@ -1,17 +1,18 @@
-local Object = require('core').Object
+local Emitter = require('core').Emitter
 local http = require('http')
 local table = require('table')
+local string = require('string')
 local debug = require('debug')
 
 local env = process.env.LUVIT_ENV or 'development'
 
-local Utopia = Object:extend()
+local Utopia = Emitter:extend()
 
 function Utopia:initialize ()
 	self.route = '/'
 	self.stack = {}
-	self.handler = function (req, res, follow)
-		return self:handle(req, res, follow)
+	self.handler = function (req, res, nxt)
+		return self:handle(req, res, nxt)
 	end
 end
 
@@ -27,13 +28,13 @@ function Utopia:use (route, fn)
 
 	table.insert(self.stack, go)
 
-	return app
+	return self
 end
 
 function Utopia:handle (req, res, out)
 	local index = 0
 
-	function follow (err)
+	function nxt (err)
 		local layer
 
 		index = index + 1
@@ -81,21 +82,28 @@ function Utopia:handle (req, res, out)
 			return
 		end
 
+		-- skip this layer if the route doesn't match
+		if not string.find(req.url, layer.route, 1, true) then
+			return nxt(err)
+		end
+
 		local handle = layer:handle()
 
 		if err then
 			local arity = debug.getinfo(handle, 'u').nparams
 			if arity == 4 then
-				handle(err, req, res, follow)
+				handle(err, req, res, nxt)
 			else
-				follow(err)
+				nxt(err)
 			end
 		else
-			handle(req, res, follow)
+			handle(req, res, nxt)
 		end
 	end
 
-	follow()
+	nxt()
+
+	return self
 end
 
 function Utopia:listen (...)
