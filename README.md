@@ -35,6 +35,7 @@ app:listen(8080)
 
 - [luvit-favicon](https://github.com/luvitrocks/luvit-favicon)
 - [luvit-logger](https://github.com/luvitrocks/luvit-logger)
+- [luvit-static](https://github.com/luvitrocks/luvit-static)
 
 ## License
 
