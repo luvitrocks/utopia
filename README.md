@@ -31,6 +31,9 @@ app:listen(8080)
 
 ## Middlewares
 
+- [luvit-favicon](https://github.com/luvitrocks/luvit-favicon)
+- [luvit-logger](https://github.com/luvitrocks/luvit-logger)
+
 ## License
 
 ```
