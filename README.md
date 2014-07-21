@@ -1,5 +1,7 @@
 # luvit-utopia
 
+[![NPM version](https://badge.fury.io/js/luvit-utopia.svg)](http://badge.fury.io/js/luvit-utopia)
+
 Utopia is a http server framework for [luvit.io](http://luvit.io) which is using "plugins" known as middlewares. Highly inspired by [connect.js](https://github.com/senchalabs/connect).
 
 ## Install
