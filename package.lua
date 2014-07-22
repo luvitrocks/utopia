@@ -1,6 +1,6 @@
 return {
 	name = "luvit-utopia",
-	version = "0.0.3-beta",
+	version = "0.0.4-beta",
 	description = "High performance middleware framework for Luvit.io",
 	repository = {
 		url = "http://github.com/luvitrocks/luvit-utopia.git",
