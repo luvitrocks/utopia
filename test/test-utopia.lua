@@ -10,10 +10,10 @@ local app = utopia:new()
 local server = http.createServer(app.handler)
 
 -- should be emmiter
-app:on('bar', function ()
-	assert('emmiter called')
+app:on('bar', function (data)
+	assert(data == 'sent data')
 end)
-app:emit('bar')
+app:emit('bar', 'sent data')
 
 -- should have clean stack when init
 equal({}, app.stack)
@@ -42,8 +42,6 @@ equal(2, #app.stack)
 equal('/', app.stack[2].route)
 equal('function', type(app.stack[2].handle))
 equal('function', type(app.stack[2].handle()))
-
-app.stack[2].handle()
 
 -- should call proper handlers
 server:listen(PORT, function ()
