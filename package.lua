@@ -1,3 +1,4 @@
+-- for older versions of luvit and alternative package managers
 return {
 	name = "luvit-utopia",
 	version = "0.0.4-beta",
@@ -7,7 +8,7 @@ return {
 	},
 	author = {
 		name = "Dmitri Voronianski",
-		email = "voronianski@gmail.com"
+		email = "dmitri.voronianski@gmail.com"
 	},
 	licenses = {"MIT"},
 	devDependencies = {
