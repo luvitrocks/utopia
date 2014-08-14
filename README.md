@@ -37,6 +37,7 @@ app:listen(8080)
 - [luvit-logger](https://github.com/luvitrocks/luvit-logger)
 - [luvit-static](https://github.com/luvitrocks/luvit-static)
 - [luvit-request-query](https://github.com/luvitrocks/luvit-request-query)
+- [luvit-timeout](https://github.com/luvitrocks/luvit-timeout)
 
 ## License
 

@@ -1,7 +1,7 @@
 -- for older versions of luvit and alternative package managers
 return {
 	name = "luvit-utopia",
-	version = "0.0.4-beta",
+	version = "0.0.5",
 	description = "High performance middleware framework for Luvit.io",
 	repository = {
 		url = "http://github.com/luvitrocks/luvit-utopia.git",
