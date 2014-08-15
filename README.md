@@ -36,6 +36,7 @@ app:listen(8080)
 - [luvit-favicon](https://github.com/luvitrocks/luvit-favicon)
 - [luvit-logger](https://github.com/luvitrocks/luvit-logger)
 - [luvit-static](https://github.com/luvitrocks/luvit-static)
+- [luvit-directory](https://github.com/luvitrocks/luvit-directory)
 - [luvit-request-query](https://github.com/luvitrocks/luvit-request-query)
 - [luvit-timeout](https://github.com/luvitrocks/luvit-timeout)
 
