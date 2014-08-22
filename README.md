@@ -39,6 +39,7 @@ app:listen(8080)
 - [luvit-directory](https://github.com/luvitrocks/luvit-directory)
 - [luvit-request-query](https://github.com/luvitrocks/luvit-request-query)
 - [luvit-timeout](https://github.com/luvitrocks/luvit-timeout)
+- [luvit-method-override](https://github.com/luvitrocks/luvit-method-override)
 
 ## License
 
