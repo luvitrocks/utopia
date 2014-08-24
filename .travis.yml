@@ -1,0 +1,19 @@
+language: node_js
+
+node_js:
+  - "0.10"
+
+before_install:
+  - git clone https://github.com/luvit/luvit.git --recursive
+  - cd luvit
+  - make
+  - cd ../
+
+script: "./luvit/build/luvit ./test/init.lua"
+
+env:
+  global:
+    - PLATFORM=linux
+  matrix:
+    - LUA=lua5.1
+    - LUA=luajit
