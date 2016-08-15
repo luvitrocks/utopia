@@ -15,11 +15,3 @@ return {
   licenses = {"MIT"},
   main = 'init.lua'
 }
-
-return {
-  name = "creationix/mylib",
-  version = "0.0.1",
-  files = {
-    "*.lua",
-  }
-}
