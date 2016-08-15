@@ -1,15 +1,10 @@
-language: node_js
-
-node_js:
-  - "0.10"
+language: c
 
 before_install:
-  - git clone https://github.com/luvit/luvit.git --recursive
-  - cd luvit
-  - make
-  - cd ../
+  - curl -L https://github.com/luvit/lit/raw/master/get-lit.sh | sh
+  - lit install
 
-script: "./luvit/build/luvit ./test/init.lua"
+script: luvit ./test
 
 env:
   global:

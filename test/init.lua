@@ -1,1 +1,1 @@
-require('luvit-test/runner').run(__dirname)
+require('./test-utopia')

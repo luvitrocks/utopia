@@ -21,7 +21,7 @@ local app = utopia:new()
 
 -- respond to all requests
 app:use(function (req, res)
-	res:finish('Hello from Utopia!')
+  res:finish('Hello from Utopia!')
 end)
 
 app:listen(8080)
@@ -36,6 +36,12 @@ app:listen(8080)
 - [luvit-request-query](https://github.com/luvitrocks/luvit-request-query)
 - [luvit-timeout](https://github.com/luvitrocks/luvit-timeout)
 - [luvit-method-override](https://github.com/luvitrocks/luvit-method-override)
+
+## Testing
+
+```
+luvit ./test
+```
 
 ## License
 
