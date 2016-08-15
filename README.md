@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/luvitrocks/luvit-utopia.svg?branch=master)](https://travis-ci.org/luvitrocks/luvit-utopia)
 [![License](http://img.shields.io/badge/Licence-MIT-brightgreen.svg)](LICENSE)
 
-> Utopia is an extensible HTTP server framework for [Luvit.io](http://luvit.io) which is using "plugins" known as middlewares and is highly inspired by [connect.js](https://github.com/senchalabs/connect).
+> Utopia is an extensible HTTP server framework for [Luvit.io](http://luvit.io) which is using "plugins" known as middlewares and is highly inspired by [Connect.js](https://github.com/senchalabs/connect).
 
 ## Install
 
@@ -41,7 +41,7 @@ local app = Utopia:new()
 ### Use middleware
 
 The core of Utopia is "using" middleware. Middleware are added as a "stack"
-where incoming requests will execute each middleware one-by-one until a middleware does not call `nxt()` within it (unlike Javascript `nxt` is predefined function in Lua, so argument cannot be named like this).
+where incoming requests will execute each middleware one-by-one until a middleware does not call `nxt()` within it (unlike Javascript `next` is predefined function in Lua, so argument cannot be named like this).
 
 ```lua
 app:use(function middleware1 (req, res, nxt)
