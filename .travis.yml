@@ -12,4 +12,5 @@ env:
     - PLATFORM=linux
   matrix:
     - LUA=lua5.1
+    - LUA=lua5.2
     - LUA=luajit

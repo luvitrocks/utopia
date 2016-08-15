@@ -1,9 +1,9 @@
-# luvit-utopia
+# Utopia
 
 [![Build Status](https://travis-ci.org/luvitrocks/luvit-utopia.svg?branch=master)](https://travis-ci.org/luvitrocks/luvit-utopia)
 [![License](http://img.shields.io/badge/Licence-MIT-brightgreen.svg)](LICENSE)
 
-Utopia is a http server framework for [luvit.io](http://luvit.io) which is using "plugins" known as middlewares. Highly inspired by [connect.js](https://github.com/senchalabs/connect).
+> Utopia is an extensible HTTP server framework for [Luvit.io](http://luvit.io) which is using "plugins" known as middlewares and is highly inspired by [connect.js](https://github.com/senchalabs/connect).
 
 ## Install
 
@@ -13,7 +13,7 @@ Since version `1.0.0` Utopia uses [lit](https://github.com/luvit/lit) as depende
 lit install voronianski/utopia
 ```
 
-## Usage
+## Example
 
 ```lua
 local Utopia = require('utopia')
@@ -27,6 +27,68 @@ end)
 app:listen(8080)
 ```
 
+## Usage
+
+### Create an app
+
+The main component is an "app". This will store all the middleware
+added.
+
+```lua
+local app = Utopia:new()
+```
+
+### Use middleware
+
+The core of Utopia is "using" middleware. Middleware are added as a "stack"
+where incoming requests will execute each middleware one-by-one until a middleware does not call `nxt()` within it (unlike Javascript `nxt` is predefined function in Lua, so argument cannot be named like this).
+
+```lua
+app:use(function middleware1 (req, res, nxt)
+  -- middleware 1
+  nxt()
+end)
+app:use(function middleware2 (req, res, nxt)
+  -- middleware 2
+  nxt()
+end)
+```
+
+### Mount middleware
+
+The `.use()` method also takes an optional path string that is matched against
+the beginning of the incoming request URL. This allows for basic routing:
+
+```lua
+app:use('/foo', function fooMiddleware(req, res, nxt)
+  -- req.url starts with "/foo"
+  nxt()
+end)
+app:use('/bar', function barMiddleware (req, res, nxt)
+  -- req.url starts with "/bar"
+  nxt()
+end)
+```
+
+### Error middleware
+
+There are special cases of "error-handling" middleware. There are middleware
+where the function takes exactly 4 arguments. Errors that occur in the middleware added before the error middleware will invoke this middleware when errors occur.
+
+```lua
+app:use(function onerror (err, req, res, nxt) 
+  -- an error occurred!
+end)
+```
+
+### Create a server from the app
+
+The last step is to actually use the Connect app in a server. The `.listen()` method is a convenience to start a HTTP server:
+
+```lua
+local server = app:listen(port)
+```
+
 ## Middlewares
 
 - [luvit-favicon](https://github.com/luvitrocks/luvit-favicon)
@@ -37,7 +99,7 @@ app:listen(8080)
 - [luvit-timeout](https://github.com/luvitrocks/luvit-timeout)
 - [luvit-method-override](https://github.com/luvitrocks/luvit-method-override)
 
-## Running tests
+## Running Tests
 
 ```
 lit install

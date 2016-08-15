@@ -17,6 +17,7 @@ return {
   },
   files = {
     '**.lua',
-    '!test*'
+    '!test*',
+    '!example*'
   }
 }
