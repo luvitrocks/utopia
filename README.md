@@ -16,8 +16,8 @@ lit install voronianski/utopia
 ## Usage
 
 ```lua
-local utopia = require('utopia')
-local app = utopia:new()
+local Utopia = require('utopia')
+local app = Utopia:new()
 
 -- respond to all requests
 app:use(function (req, res)
@@ -37,9 +37,10 @@ app:listen(8080)
 - [luvit-timeout](https://github.com/luvitrocks/luvit-timeout)
 - [luvit-method-override](https://github.com/luvitrocks/luvit-method-override)
 
-## Testing
+## Running tests
 
 ```
+lit install
 luvit ./test
 ```
 

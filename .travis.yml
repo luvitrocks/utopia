@@ -2,9 +2,10 @@ language: c
 
 before_install:
   - curl -L https://github.com/luvit/lit/raw/master/get-lit.sh | sh
-  - lit install
+  - ./lit make luvit/luvit
+  - ./lit install
 
-script: luvit ./test
+script: ./luvit ./test
 
 env:
   global:
