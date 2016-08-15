@@ -1,6 +1,5 @@
 # luvit-utopia
 
-[![NPM version](https://badge.fury.io/js/luvit-utopia.svg)](http://badge.fury.io/js/luvit-utopia)
 [![Build Status](https://travis-ci.org/luvitrocks/luvit-utopia.svg?branch=master)](https://travis-ci.org/luvitrocks/luvit-utopia)
 [![License](http://img.shields.io/badge/Licence-MIT-brightgreen.svg)](LICENSE)
 
@@ -8,22 +7,17 @@ Utopia is a http server framework for [luvit.io](http://luvit.io) which is using
 
 ## Install
 
-Utopia uses [npm](https://www.npmjs.org/) as dependency manager so for installing and using it you will need latest [luvit.io](http://luvit.io/dist/latest/) version (``>= 0.8.2``) and ``npm`` (this can be grabbed together with [node.js](http://nodejs.org/)) installed on your machine.
+Since version `1.0.0` Utopia uses [lit](https://github.com/luvit/lit) as dependency manager:
 
 ```bash
-npm install luvit-utopia
+lit install voronianski/utopia
 ```
 
 ## Usage
 
 ```lua
-local utopia = require('luvit-utopia')
-
+local utopia = require('utopia')
 local app = utopia:new()
-
--- log every request
-local logger = require('luvit-logger')
-app:use(logger('dev'))
 
 -- respond to all requests
 app:use(function (req, res)
@@ -60,7 +54,7 @@ WWWWWW||WWWWWW
 
 MIT Licensed
 
-Copyright (c) 2014 Dmitri Voronianski [dmitri.voronianski@gmail.com](mailto:dmitri.voronianski@gmail.com)
+Copyright (c) 2014-2016 Dmitri Voronianski [dmitri.voronianski@gmail.com](mailto:dmitri.voronianski@gmail.com)
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
