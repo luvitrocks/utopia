@@ -83,7 +83,7 @@ end)
 
 ### Create a server from the app
 
-The last step is to actually use the Connect app in a server. The `.listen()` method is a convenience to start a HTTP server:
+The last step is to actually use the Utopia app in a server. The `.listen()` method is a convenience to start a HTTP server:
 
 ```lua
 local server = app:listen(port)
