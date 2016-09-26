@@ -51,7 +51,9 @@ function Utopia:handle (req, res, out)
         local msg
 
         -- default to 500
-        if res.code < 400 then res.code = 500 end
+        if not res.code or res.code < 400 then
+          res.code = 500
+        end
 
         -- respect err.status
         if type(err) == 'table' and err.status then
