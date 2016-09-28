@@ -17,6 +17,7 @@ lit install voronianski/utopia
 
 ```lua
 local Utopia = require('utopia')
+
 local app = Utopia:new()
 
 -- respond to all requests
@@ -56,7 +57,7 @@ end)
 
 ### Mount middleware
 
-The `.use()` method also takes an optional path string that is matched against
+The `:use()` method also takes an optional path string that is matched against
 the beginning of the incoming request URL. This allows for basic routing:
 
 ```lua
