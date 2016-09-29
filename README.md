@@ -92,13 +92,13 @@ local server = app:listen(port)
 
 ## Middlewares
 
-- [luvit-favicon](https://github.com/luvitrocks/luvit-favicon)
-- [luvit-logger](https://github.com/luvitrocks/luvit-logger)
-- [luvit-static](https://github.com/luvitrocks/luvit-static)
-- [luvit-directory](https://github.com/luvitrocks/luvit-directory)
-- [luvit-request-query](https://github.com/luvitrocks/luvit-request-query)
-- [luvit-timeout](https://github.com/luvitrocks/luvit-timeout)
-- [luvit-method-override](https://github.com/luvitrocks/luvit-method-override)
+- [favicon](https://github.com/luvitrocks/favicon)
+- [logger](https://github.com/luvitrocks/logger)
+- [static](https://github.com/luvitrocks/static)
+- [directory](https://github.com/luvitrocks/directory)
+- [request-query](https://github.com/luvitrocks/request-query)
+- [timeout](https://github.com/luvitrocks/timeout)
+- [method-override](https://github.com/luvitrocks/method-override)
 
 ## Running Tests
 
