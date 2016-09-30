@@ -1,6 +1,6 @@
 # Utopia
 
-[![Build Status](https://travis-ci.org/luvitrocks/luvit-utopia.svg?branch=master)](https://travis-ci.org/luvitrocks/luvit-utopia)
+[![Build Status](https://travis-ci.org/luvitrocks/utopia.svg?branch=master)](https://travis-ci.org/luvitrocks/utopia)
 [![License](http://img.shields.io/badge/Licence-MIT-brightgreen.svg)](LICENSE)
 
 > Utopia is an extensible HTTP server framework for [Luvit.io](http://luvit.io) which is using "plugins" known as middlewares and is highly inspired by [Connect.js](https://github.com/senchalabs/connect).
