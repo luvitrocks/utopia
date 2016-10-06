@@ -94,11 +94,12 @@ local server = app:listen(port)
 
 - [favicon](https://github.com/luvitrocks/favicon)
 - [logger](https://github.com/luvitrocks/logger)
+- [request-query](https://github.com/luvitrocks/request-query)
+- [utopia-route](https://github.com/luvitrocks/utopia-route)
 - [static](https://github.com/luvitrocks/static)
 - [directory](https://github.com/luvitrocks/directory)
-- [request-query](https://github.com/luvitrocks/request-query)
-- [timeout](https://github.com/luvitrocks/timeout)
 - [method-override](https://github.com/luvitrocks/method-override)
+- [timeout](https://github.com/luvitrocks/timeout)
 
 ## Running Tests
 
