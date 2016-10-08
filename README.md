@@ -1,5 +1,7 @@
 # Utopia
 
+[![Join the chat at https://gitter.im/luvit-utopia/Lobby](https://badges.gitter.im/luvit-utopia/Lobby.svg)](https://gitter.im/luvit-utopia/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![Build Status](https://travis-ci.org/luvitrocks/utopia.svg?branch=master)](https://travis-ci.org/luvitrocks/utopia)
 [![License](http://img.shields.io/badge/Licence-MIT-brightgreen.svg)](LICENSE)
 
