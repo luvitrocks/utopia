@@ -62,7 +62,7 @@ The `:use()` method also takes an optional path string that is matched against
 the beginning of the incoming request URL. This allows for basic routing:
 
 ```lua
-app:use('/foo', function fooMiddleware(req, res, nxt)
+app:use('/foo', function fooMiddleware (req, res, nxt)
   -- req.url starts with "/foo"
   nxt()
 end)
