@@ -104,6 +104,7 @@ local server = app:listen(port)
 - [directory](https://github.com/luvitrocks/directory)
 - [method-override](https://github.com/luvitrocks/method-override)
 - [timeout](https://github.com/luvitrocks/timeout)
+- [response-time](https://github.com/luvitrocks/response-time)
 
 ## Running Tests
 
