@@ -16,7 +16,32 @@ function Utopia:initialize ()
   end
 end
 
+function Utopia:lazyInit ()
+  if self._inited then
+    return
+  end
+
+  self._inited = true
+
+  local init = { route = '/'}
+  function init:handle ()
+    return function (req, res, nxt)
+      res:setHeader('X-Powered-By', 'Utopia Framework')
+      req.res = res
+      res.req = req
+      req.nxt = nxt
+      req.next = nxt
+
+      nxt()
+    end
+  end
+
+  table.insert(self.stack, init)
+end
+
 function Utopia:use (route, fn)
+  self:lazyInit()
+
   if type(route) ~= 'string' then
     fn = route
     route = '/'
@@ -24,7 +49,9 @@ function Utopia:use (route, fn)
 
   -- define next stack
   local go = { route = route }
-  function go:handle () return fn end
+  function go:handle ()
+    return fn
+  end
 
   table.insert(self.stack, go)
 

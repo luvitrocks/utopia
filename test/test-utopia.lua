@@ -33,7 +33,7 @@ test('should have proper request data', function (t)
 end)
 
 test('should call proper handlers', function (t)
-  local num = 1
+  local num = 2
   local firstStack = app.stack[num]
 
   t:equals(num, #app.stack, 'stack length is ' .. num)
@@ -57,7 +57,7 @@ test('should have more proper request data', function (t)
 end)
 
 test('should call more proper handlers', function (t)
-  local num = 2
+  local num = 3
   local secondStack = app.stack[num]
 
   t:equals(num, #app.stack, 'stack length is ' .. num)
