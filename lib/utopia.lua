@@ -23,10 +23,11 @@ function Utopia:lazyInit ()
 
   self._inited = true
 
-  local init = { route = '/'}
+  local init = { route = '/' }
   function init:handle ()
     return function (req, res, nxt)
-      res:setHeader('X-Powered-By', 'Utopia Framework')
+      -- populate request and response with each other
+      res:setHeader('X-Powered-By', 'utopiaframework.org')
       req.res = res
       res.req = req
       req.nxt = nxt
