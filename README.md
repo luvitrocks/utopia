@@ -97,6 +97,7 @@ local server = app:listen(port)
 - [logger](https://github.com/luvitrocks/logger)
 - [request-query](https://github.com/luvitrocks/request-query)
 - [body-parser](https://github.com/luvitrocks/body-parser)
+- [cookie-parser](https://github.com/luvitrocks/cookie-parser)
 - [route](https://github.com/luvitrocks/utopia-route)
 - [cors](https://github.com/luvitrocks/cors)
 - [json-response](https://github.com/luvitrocks/json-response)
@@ -105,6 +106,7 @@ local server = app:listen(port)
 - [method-override](https://github.com/luvitrocks/method-override)
 - [timeout](https://github.com/luvitrocks/timeout)
 - [response-time](https://github.com/luvitrocks/response-time)
+- [response-methods](https://github.com/luvitrocks/http-utils#response-methods)
 
 ## Running Tests
 
