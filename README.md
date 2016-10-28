@@ -8,8 +8,6 @@
 
 ## Install
 
-Since version `1.0.0` Utopia uses [lit](https://github.com/luvit/lit) as dependency manager:
-
 ```bash
 lit install voronianski/utopia
 ```
